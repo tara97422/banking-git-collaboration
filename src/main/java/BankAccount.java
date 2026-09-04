@@ -1,7 +1,7 @@
 public class BankAccount {
 
     private long accountNumber;
-    private double balance;
+    private double balance=10000;
     private String accountHolderName;
 
     public String deposit(double amount) {
