@@ -16,5 +16,13 @@ public class BankAccount {
         balance-=amount
         return "amount withdrawn succesffully"
     }
+    
+    public String validateAccountHolder() {
+    if (accountHolderName == null || accountHolderName.trim().isEmpty()) {
+        return "Invalid account holder name";
+    }
+    return "Valid account holder name";
+}
 
+    
 }
