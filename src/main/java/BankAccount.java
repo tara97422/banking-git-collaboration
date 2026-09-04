@@ -1,7 +1,7 @@
 public class BankAccount {
 
     private long accountNumber;
-    private double balance;
+    private double balance=5000;
     private String accountHolderName;
 
     public String deposit(double amount) {
@@ -16,5 +16,13 @@ public class BankAccount {
         balance-=amount
         return "amount withdrawn succesffully"
     }
+    
+    public String validateAccountHolder() {
+    if (accountHolderName == null || accountHolderName.trim().isEmpty()) {
+        return "Invalid account holder name";
+    }
+    return "Valid account holder name";
+}
 
+    
 }
