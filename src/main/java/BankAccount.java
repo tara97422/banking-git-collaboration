@@ -11,4 +11,10 @@ public class BankAccount {
 
     }
 
+    public String withdraw(double amount){
+        if(amount>balance) return "insufficient Balance";
+        balance-=amount
+        return "amount withdrawn succesffully"
+    }
+
 }
