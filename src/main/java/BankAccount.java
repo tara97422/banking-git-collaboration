@@ -1,7 +1,9 @@
 public class BankAccount {
 
     private long accountNumber;
+
     private double balance=10000;
+
     private String accountHolderName;
 
     public String deposit(double amount) {
@@ -21,5 +23,13 @@ public class BankAccount {
         if(balance>0) return "Account is active";
         return "Account is inactive";
     }
+    
+    public String validateAccountHolder() {
+    if (accountHolderName == null || accountHolderName.trim().isEmpty()) {
+        return "Invalid account holder name";
+    }
+    return "Valid account holder name";
+}
 
+    
 }
