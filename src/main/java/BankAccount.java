@@ -1,7 +1,9 @@
 public class BankAccount {
 
     private long accountNumber;
-    private double balance=5000;
+
+    private double balance=10000;
+
     private String accountHolderName;
 
     public String deposit(double amount) {
@@ -13,8 +15,13 @@ public class BankAccount {
 
     public String withdraw(double amount){
         if(amount>balance) return "insufficient Balance";
-        balance-=amount
-        return "amount withdrawn succesffully"
+        balance-=amount;
+        return "amount withdrawn succesffully";
+    }
+
+    public String isActive(){
+        if(balance>0) return "Account is active";
+        return "Account is inactive";
     }
     
     public String validateAccountHolder() {
